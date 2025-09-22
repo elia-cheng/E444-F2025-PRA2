@@ -1,3 +1,8 @@
-# this requirements file is used by Heroku
-# requirements for other configurations are located in the requirements subdirectory
--r requirements/heroku.txt
+flask
+flask-bootstrap
+flask-moment
+flask-wtf
+wtforms
+jinja2
+email-validator
+Werkzeug
