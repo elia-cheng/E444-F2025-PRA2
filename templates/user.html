@@ -1,4 +1,5 @@
 {% extends "bootstrap/base.html" %}
+{{ moment.include_moment() }}
 
 {% block title %}Flasky{% endblock %}
 
@@ -29,5 +30,8 @@
     <div class="page-header">
         <h1>Hello, {{ name }}!</h1>
     </div>
+
+    <p>The local data and time is {{ moment(now).format('LLLL') }}</p>
+    <p>That was {{ elapsed_time }} minutes ago</p>
 </div>
 {% endblock %}
