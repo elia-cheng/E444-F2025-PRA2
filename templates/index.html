@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% import "_macros.html" as macros %}
+{{ moment.include_moment() }}
+
+
+{% block title %}Flasky{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>Hello, {% if name %}{{ name }}{% else %}Stranger{% endif %}!
+        {% if email %}
+            {% if 'utoronto' in email %}
+                Your UofT email is {{ email }}
+            {% else %}
+                Please use your UofT email
+            {% endif %}
+        {% endif %}
+    </h1>
+
+</div>
+{{ wtf.quick_form(form) }}
+{% endblock %}
